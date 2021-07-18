@@ -1,4 +1,7 @@
-import React, { useState } from 'react'
+// import React, { useState } from 'preact'
+import { h } from 'preact';
+import { useState } from 'preact/hooks';
+
 
 export default function Counter() {
   const [count, setCount] = useState(0)
