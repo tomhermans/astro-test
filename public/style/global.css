@@ -32,3 +32,9 @@ a, button, .myelements
 	-ms-touch-action: manipulation;	/* IE10  */
 	touch-action: manipulation;		/* IE11+ */
 }
+
+pre {
+  max-width: 90vw;
+  overflow: scroll;
+  outline: 2px dotted #ccc;
+}

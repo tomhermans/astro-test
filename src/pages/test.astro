@@ -1,8 +1,20 @@
 ---
+const apiUrl = 'https://jsonplaceholder.typicode.com/todos';
 // src/pages/index.astro
 import BaseLayout from '../layouts/BaseLayout.astro'
+
+const remoteData = await fetch(apiUrl).then((res) => res.json());
+
 ---
 <BaseLayout title="Homepage">
-  <h1>Hello, world!</h1>
+  <h1>Hello, folks!</h1>
   <p>This is my page content. It will be nested inside a layout.</p>
+
+  <pre>
+    {
+      remoteData.map(function (value, label) {
+        return JSON.stringify(value);
+      })
+    }
+  </pre>
 </BaseLayout>

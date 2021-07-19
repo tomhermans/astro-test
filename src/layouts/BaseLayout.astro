@@ -1,22 +1,20 @@
 ---
 // src/layouts/BaseLayout.astro
 import OpenGraphMeta from '../layouts/OpenGraphMeta.astro';
+import Menu from '../components/Menu.astro';
 
 const {title} = Astro.props;
 ---
 <html>
   <head>
     <title>Example Layout: {title}</title>
+    <link rel="stylesheet" href="/style/global.css">
     <OpenGraphMeta />
   </head>
   <body>
   baselayout
     <!-- Adds a navigation bar to every page. -->
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Posts</a>
-      <a href="#">Contact</a>
-    </nav>
+    <Menu />
     <!-- slot: your page content will be injected here. -->
     <slot />
   </body>
