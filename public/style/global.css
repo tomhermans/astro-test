@@ -27,7 +27,7 @@ body {
   }
 }
 
-a, button, .myelements
+html, a, button, .myelements
 {
 	-ms-touch-action: manipulation;	/* IE10  */
 	touch-action: manipulation;		/* IE11+ */
